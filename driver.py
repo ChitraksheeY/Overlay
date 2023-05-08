@@ -26,5 +26,8 @@ for hist, value in histdict.items():
     #Calling ROOT and executing the C script:
     arguments=f'"{channelname}", "{plotname}", "{plottitle}","{ofname}"'
     processline = f"root -l -b -q 'make_overlay.C({arguments})'"
-    print(processline)
+    #print(processline)
+    os.system(processline)
+
+print(f'\nAll plots are dumped in the following folder : {outdir}')
     
